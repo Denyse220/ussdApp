@@ -37,12 +37,14 @@ def ussdApp(request):
             response += "2. ihene"
         elif text == '1*1':
             product="inka"
-            response = "CON shyiramo ibiro ukeneye' "+str(product)+"\n"
+            response = "CON shyiramo ibiro ukeneye by'inyama y' "+str(product)+"\n"
         elif category =='1*1' and int(len(level)) == 3 and str(level[2]) in  str(level):
-            response = "CON Aderesi \n"
+            response = "CON hitamo amasaaha akunogeye \n"
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
-            response = "CON injiza amafaranga wishyure\n"
+            response = "CON Aderesi \n"
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
+            response = "CON injiza amafaranga wishyure\n"
+        elif category =='1*1' and int(len(level)) == 6 and str(level[5]) in  str(level):
             
 
             # save the data into the database
@@ -89,10 +91,10 @@ def ussdApp(request):
          
         #  ======================== INGENGABIHE==================
         elif text == '2':
-            response = "CON Hitamo isaha ikunogeye \n "
-            response += "1. 80:00-11:00 \n"
-            response += "2. 1:00-5:00 \n"
-            response += "3. Anytime"
+            response = "CON Ubwoko bw'inyama ducuruza \n "
+            response += "1. Inka \n"
+            response += "2. Ihene \n"
+            response += "3. Inkoko"
         elif text == '2*1':
             response ="END murakoze"
             # save the data
