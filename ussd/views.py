@@ -96,7 +96,7 @@ def ussdApp(request):
             response += "2. Ihene \n"
             response += "3. Inkoko"
         elif text == '2*1':
-            response ="END murakoze"
+            response ="END murakoze gukoresha serivise zacu"
             # save the data
         #     insertData(
         #         category='Rimwe',
