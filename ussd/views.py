@@ -43,6 +43,8 @@ def ussdApp(request):
         elif category =='1*1' and int(len(level)) == 4 and str(level[3]) in  str(level):
             response = "CON injiza amafaranga wishyure\n"
         elif category =='1*1' and int(len(level)) == 5 and str(level[4]) in  str(level):
+            
+
             # save the data into the database
             category='Inka'
             sizeOfland=level[2]
@@ -92,6 +94,7 @@ def ussdApp(request):
             response += "2. 1:00-5:00 \n"
             response += "3. Anytime"
         elif text == '2*1':
+            response ="END murakoze"
             # save the data
         #     insertData(
         #         category='Rimwe',
@@ -114,8 +117,8 @@ def ussdApp(request):
         #     )
         #     response ="END Murakoze , tuzajya tubagezaho amakuru ku iteganyagihe Buri munsi"
 
-        # else:
-        #     response = "END Ukanze ibitaribyo, ongera mukanya"
-        # return HttpResponse(response)
-    # else:
+        else:
+            response = "END Ukanze ibitaribyo, ongera mukanya"
+        return HttpResponse(response)
+    else:
          return HttpResponse('we are on ussd app')
